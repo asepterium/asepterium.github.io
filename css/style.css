@@ -11,9 +11,9 @@ html, body {
 body {
   background-image: url("bg/background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  background-attachment: fixed;
+  background-color: black;
 }
 
 /* Background full screen */
