@@ -10,15 +10,9 @@ html, body {
 }
 
 /* Background full screen */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('../bg/background.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
+body {
+  background: url('../bg/background.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Loading bar */
