@@ -7,6 +7,7 @@ html, body {
   background-color: black;
 }
 
+/* Background fleksibel tanpa potong */
 .bg-image {
   position: fixed;
   top: 50%;
@@ -16,4 +17,23 @@ html, body {
   object-fit: contain;
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+/* Notifikasi jika portrait */
+.rotate-notice {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+  display: none;
+}
+.rotate-notice img {
+  width: 48px;
+  margin-bottom: 8px;
+}
+.portrait .rotate-notice {
+  display: block;
 }
