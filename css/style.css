@@ -7,7 +7,7 @@ html, body {
   background-color: black;
 }
 
-/* Background fleksibel & tidak terpotong */
+/* Gambar background fleksibel */
 .bg-image {
   position: fixed;
   top: 50%;
@@ -17,4 +17,21 @@ html, body {
   object-fit: contain;
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+/* Contoh menu */
+.menu {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.menu button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #00f0ff;
+  color: black;
+  border-radius: 10px;
 }
