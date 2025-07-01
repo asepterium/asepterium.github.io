@@ -1,5 +1,7 @@
 /* style.css */
-html, body {
+html, 
+
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -7,7 +9,17 @@ html, body {
   overflow: hidden;
   font-family: sans-serif;
 }
-
+.bg-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  z-index: -1;
+}
 body {
   background-image: url("bg/background.jpg");
   background-repeat: no-repeat;
