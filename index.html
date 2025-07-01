@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AsepTerium</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://asepterium.github.io/css/style.css" />
 </head>
 <body>
-  <img src="bg/background.jpg" class="bg-image" alt="Background">
+  <div class="rotate-notice">
+    <img src="https://cdn-icons-png.flaticon.com/512/1827/1827524.png" alt="Rotate Icon" />
+    <p>Guling HP Anda untuk tampilan maksimal (landscape)</p>
+  </div>
+
+  <img src="https://asepterium.github.io/bg/background.jpg" class="bg-image" alt="Background" />
+
+  <script>
+    function updateOrientation() {
+      if (window.innerHeight > window.innerWidth) {
+        document.body.classList.add('portrait');
+      } else {
+        document.body.classList.remove('portrait');
+      }
+    }
+    window.addEventListener('resize', updateOrientation);
+    window.addEventListener('orientationchange', updateOrientation);
+    updateOrientation();
+  </script>
 </body>
 </html>
