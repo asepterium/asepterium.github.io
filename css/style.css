@@ -1,3 +1,4 @@
+/* style.css */
 html, body {
   margin: 0;
   padding: 0;
@@ -7,19 +8,18 @@ html, body {
   background-color: black;
 }
 
-/* Background fleksibel tanpa potong */
+/* Background fleksibel tidak terpotong */
 .bg-image {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: contain;
-  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
-/* Notifikasi jika portrait */
+/* Notifikasi putar layar */
 .rotate-notice {
   position: absolute;
   top: 20px;
