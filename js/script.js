@@ -1,6 +1,3 @@
-// js/script.js
-
-// Deteksi orientasi layar
 function updateOrientation() {
   if (window.innerHeight > window.innerWidth) {
     document.body.classList.add('portrait');
@@ -8,21 +5,15 @@ function updateOrientation() {
     document.body.classList.remove('portrait');
   }
 }
-
 window.addEventListener('resize', updateOrientation);
 window.addEventListener('orientationchange', updateOrientation);
 updateOrientation();
 
-// Simulasi loading bar (placeholder)
-const loadingFill = document.querySelector('.loading-fill');
+// Simulasi loading progress
 let progress = 0;
-
-const loadingInterval = setInterval(() => {
-  progress += 1;
+const loadingFill = document.querySelector('.loading-fill');
+const interval = setInterval(() => {
+  progress += 2;
   loadingFill.style.width = progress + '%';
-
-  if (progress >= 100) {
-    clearInterval(loadingInterval);
-    console.log("Selesai loading (simulasi)");
-  }
-}, 30);
+  if (progress >= 100) clearInterval(interval);
+}, 60);
