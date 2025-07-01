@@ -7,31 +7,13 @@ html, body {
   background-color: black;
 }
 
-/* Pastikan gambar tidak membesar aneh */
 .bg-image {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-/* Rotasi HP */
-.rotate-notice {
-  position: absolute;
-  top: 20px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: white;
-  z-index: 10;
-  display: none;
-}
-.rotate-notice img {
-  width: 48px;
-  margin-bottom: 8px;
-}
-.portrait .rotate-notice {
-  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
