@@ -1,14 +1,15 @@
-/* style.css */
-html, 
-
-body {
+/* Reset dan umum */
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
   font-family: sans-serif;
+  background-color: black;
 }
+
+/* Background image full fleksibel (rasio 16:9) */
 .bg-image {
   position: fixed;
   top: 50%;
@@ -19,19 +20,6 @@ body {
   transform: translate(-50%, -50%);
   object-fit: contain;
   z-index: -1;
-}
-body {
-  background-image: url("bg/background.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-color: black;
-}
-
-/* Background full screen */
-body {
-  background: url('../bg/background.jpg') no-repeat center center fixed;
-  background-size: cover;
 }
 
 /* Loading bar */
@@ -53,7 +41,7 @@ body {
   transition: width 0.2s;
 }
 
-/* Rotasi HP */
+/* Peringatan rotasi HP */
 .rotate-notice {
   position: absolute;
   top: 20px;
