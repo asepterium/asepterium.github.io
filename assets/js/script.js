@@ -57,3 +57,13 @@ loginBtn.addEventListener("click", () => {
     alert("Masukkan email yang valid.");
   }
 });
+function handleCredentialResponse(response) {
+  const data = jwt_decode(response.credential);
+  console.log("Login sukses sebagai:", data.name);
+
+  // Simpan ke localStorage (opsional)
+  localStorage.setItem("user", JSON.stringify(data));
+
+  // Redirect ke main.html setelah login
+  window.location.href = "main.html";
+}
