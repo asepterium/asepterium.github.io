@@ -1,37 +1,153 @@
 html, body {
   margin: 0;
   padding: 0;
+  background: #000;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: black;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Gambar background fleksibel */
-.bg-image {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+.container {
+  position: relative;
   width: 100vw;
   height: 100vh;
-  object-fit: contain;
-  transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
-/* Contoh menu */
-.menu {
+.image-container img {
   position: absolute;
-  bottom: 40px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (orientation: portrait) {
+  .image-container img {
+    object-fit: contain;
+  }
+}
+
+.rotate-warning {
+  position: absolute;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  z-index: 99;
+  display: none;
 }
-.menu button {
-  padding: 10px 20px;
-  font-size: 18px;
+
+@media screen and (orientation: portrait) {
+  .rotate-warning {
+    display: block;
+  }
+}
+
+#start-button {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: #000000;
   border: none;
-  background-color: #00f0ff;
-  color: black;
+  padding: 1px 24px;
+  font-size: 20px;
+  color: #00ccff;
   border-radius: 10px;
+  box-shadow: 0 0 10px #999999;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#tip {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #00ccff;
+  text-shadow: 2px 2px 5px #000;
+  display: none;
+}
+
+#loading-bar-container {
+  position: absolute;
+  bottom: 60px;
+  left: 5%;
+  width: 90%;
+  height: 5px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+}
+
+#loading-bar {
+  height: 100%;
+  width: 0%;
+  background: #00ccff;
+  box-shadow: 0 0 8px #00ccff;
+}
+
+#percentage {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  display: none;
+}
+
+/* Popup Login */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ccff;
+  text-align: center;
+}
+
+.popup-content h2 {
+  color: #00ccff;
+  margin-bottom: 10px;
+}
+
+.popup-content input {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 15px;
+  border: 2px solid #00ccff;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #000;
+  color: white;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  background: #00ccff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
